@@ -1,0 +1,223 @@
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сайт класса</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            background: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #333;
+        }
+        nav a {
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+        nav a:hover {
+            background: #4CAF50;
+        }
+        .container {
+            padding: 20px;
+        }
+        .schedule, .news, .gallery {
+            margin: 20px 0;
+        }
+        .gallery img {
+            max-width: 100%;
+            height: auto;
+        }
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background: #333;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Стили для круговой диаграммы */
+        .chart-container {
+            width: 300px;
+            height: 300px;
+            position: relative;
+        }
+
+        .chart-label {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .legend {
+            margin-top: 20px;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Добро пожаловать на сайт нашего класса! <span id="clock"></span></h1>
+    </header>
+
+    <nav>
+        <a href="#schedule">Расписание</a>
+        <a href="#news">Новости</a>
+        <a href="#gallery">Домашнее задание</a>
+        <a href="#contacts">Контакты</a>
+         <a href="#chart">Диаграмма</a>
+    </nav>
+
+    <div class="container">
+     <section id="schedule" class="schedule">
+        <h2>Расписание на понедельник для 8а</h2>
+        <table border="1" cellpadding="10">
+            <tr>
+                    <th>Время</th>
+                    <th>Предмет</th>
+                    <th>Учитель</th>
+            </tr>
+            <tr>
+                    <td>08:00 - 08:40</td>
+                    <td>Алгебра</td>
+                    <td>Ирина Анатольевна</td>
+            </tr>
+            <tr>
+                    <td>08:55 - 09:35</td>
+                    <td>Русский язык</td>
+                    <td>Ольга Роальдовна</td>
+             </tr>
+            <tr>
+                    <td>09:50 - 10:30</td>
+                    <td>Черчение</td>
+                    <td>Вера Генадьевна</td>
+            </tr>
+            <tr>
+                    <td>10:45 - 11:25</td>
+                    <td>Музыка</td>
+                    <td>Светлана Никаноровна</td>
+            </tr>
+            <tr>
+                    <td>11:40 - 12:20</td>
+                    <td>Алгебра</td>
+                    <td>Ирина Анатольевна</td>
+            </tr>
+            <tr>
+                    <td>12:35 - 13:15</td>
+                    <td>Физика</td>
+                    <td>Наталья Юрьевна</td>
+            </tr>
+             <tr>
+                    <td>13:30 - 14:10</td>
+                    <td>Английский</td>
+                    <td>Наталья Викторовна</td>
+                </tr>
+            </table>
+    </section>
+
+    <section id="news" class="news">
+            <h2>Новости</h2>
+            <article>
+                <h3>Полезно</h3>
+                <p>Не забудьте во вторник 1 группа идет на хайтек. А 2 группа идет в четверг.</p>
+            </article>
+            <article>
+                <h3>Для талантов</h3>
+                <p>В пятницу после уроков идет электротехника. Незабывааем!</p>
+            </article>
+    </section>
+
+    <section id="gallery" class="gallery">
+            <h2>Домашние задания и интересные новости</h2>
+            <p>Дз на сегодня:</p>
+            <p>по алгебре: фото с заданиями в 8а</p>
+            <p>по химии: готовится к самостоятельной работе (параграфы 32, 33, задания 3)</p>
+            <p>по биологии: параграф 32 (в АИСе написано)</p>
+            <p>по литературе: доделать работу</p>
+            <p>по русскому: номер 278 с. 136</p>
+    </section>
+
+    <section id="contacts" class="contacts">
+            <h2>Контакты</h2>
+            <p>Классный руководитель: Ирина Анатольевна</p>
+            <p>Email: <a href="mailto:Legendary190710@gmail.com">Legendary190710@gmail.com</a></p>
+            <p>Телефон: +7 (992) 339-37-64</p>
+        </section>
+
+    <!-- Круговая диаграмма -->
+    <section id="chart" class="chart">
+        <h2>Соотношение мальчиков и девочек в классе</h2>
+        <div class="chart-container">
+            <svg width="300" height="300">
+                <!--  В круге 360 градусов -->
+                <!--  Мальчики: (16 / 28) * 360 = 205.71 градуса -->
+                <!--  Девочки: (12 / 28) * 360 = 154.29 градуса -->
+                <!--  SVG path использует радиус 100 и центр в (150, 150) -->
+                <path d="M150,150 L250,150 A100,100 0 0,1 43.3, 213.4 Z" fill="#66b3ff"></path>  <!-- Мальчики -->
+                <path d="M150,150 L43.3, 213.4 A100,100 0 0,1 250,150 Z" fill="#ff99cc"></path> <!-- Девочки -->
+            </svg>
+            <div class="chart-label">Всего: 28</div>
+        </div>
+
+        <div class="legend">
+            <div class="legend-item">
+                <div class="legend-color" style="background-color: #66b3ff;"></div>
+                Мальчики: 16
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background-color: #ff99cc;"></div>
+                Девочки: 12
+            </div>
+        </div>
+    </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Наш класс. Все права защищены.</p>
+    </footer>
+
+    <script>
+        function updateClock() {
+            const now = new Date();
+            const timeZoneOffset = now.getTimezoneOffset(); // Смещение в минутах относительно UTC
+            const pervouralskOffset = timeZoneOffset + (5 * 60); // Первоуральск UTC+5, в минутах
+            const pervouralskTime = new Date(now.getTime() + (pervouralskOffset * 60000)); // Преобразуем в миллисекунды
+            const hours = pervouralskTime.getHours().toString().padStart(2, '0');
+            const minutes = pervouralskTime.getMinutes().toString().padStart(2, '0');
+            const seconds = pervouralskTime.getSeconds().toString().padStart(2, '0');
+            document.getElementById('clock').textContent = `Текущее время (Первоуральск): ${hours}:${minutes}:${seconds}`;
+        }
+
+        setInterval(updateClock, 1000); // Обновлять каждую секунду
+        updateClock(); // Запустить сразу при загрузке страницы
+    </script>
+</body>
+</html>
